@@ -1,0 +1,14 @@
+<h1><%= @event.name %></h1>
+<h2><%= @event.date %></h2>
+
+<ol>
+<% @attendees.each do |attendee| %>
+    <li><%= attendee.email %></li>
+<% end %>
+</ol>
+
+<%= form_with url: assign_user_event_path(@event), method: :patch, local: true do %>
+    <%= submit_tag 'Attend event', class: 'btn btn-primary' %>
+<% end %>
+  
+<%= link_to "Event index", events_path %>

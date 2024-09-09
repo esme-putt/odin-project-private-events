@@ -1,0 +1,7 @@
+<%= form_with model: @event do |form| %>
+    <%= form.label :name, "Name" %>
+    <%= form.text_field :name %>
+    <%= form.label :date, "Date" %>
+    <%= form.date_field :date %>
+    <%= form.submit "Submit" %>
+<% end %>
